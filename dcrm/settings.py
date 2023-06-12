@@ -60,6 +60,11 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'dcrm.wsgi.application'
 
+from dotenv import load_dotenv
+load_dotenv()
+import os
+
+password = os.getenv("PASSWORD")
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -69,7 +74,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'dcrm',
         'USER': 'postgres',
-        'PASSWORD': 'QwertyAsdf',
+        'PASSWORD': password,
         'HOST': 'localhost'
     }
 }
