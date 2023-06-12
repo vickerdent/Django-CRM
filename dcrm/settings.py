@@ -65,6 +65,7 @@ load_dotenv()
 import os
 
 password = os.getenv("PASSWORD")
+user = os.getenv("USER")
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
@@ -73,7 +74,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'dcrm',
-        'USER': 'postgres',
+        'USER': user,
         'PASSWORD': password,
         'HOST': 'localhost'
     }

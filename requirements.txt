@@ -1,1 +1,5 @@
 python-dotenv
+django
+pymongo
+psycopg2
+Pillow
