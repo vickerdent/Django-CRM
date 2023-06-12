@@ -2,6 +2,21 @@
 
 {% block content%}
 
-<h1>Hello World!</h1>
-
+{% if user.is_authenticated %}
+    <div class="col-md-6 offset-md-3">
+        <h2>Welcome, {{ user }}</h2>
+    </div>
+{% else %}
+    <div class="col-md-6 offset-md-3">
+        <h2>Defining CRM</h2>
+        <h6>Customer relationship management (CRM) is a set of integrated, 
+        data-driven software solutions that help manage, track, and store information related 
+        to your company's current and potential customers. By keeping this information in a 
+        centralised system, business teams have access to the insights they need, the moment 
+        they need them.</h6>
+        <h6>Without the support of an integrated CRM solution, your company may miss growth 
+            opportunities and lose potential revenue because it's not optimising operating processes 
+            or making the most of customer relationships and sales leads.</h6>
+    </div>
+{% endif %}
 {% endblock %}
