@@ -4,9 +4,10 @@
 
 {% if user.is_authenticated %}
     <div class="col-md-6 offset-md-3">
-        <h2>Welcome, {{ user }}</h2>
+        <h2>Welcome, {{ user }}!</h2>
     </div>
-{% else %}
+{% endif %}
+    <br>
     <div class="col-md-6 offset-md-3">
         <h2>Defining CRM</h2>
         <h6>Customer relationship management (CRM) is a set of integrated, 
@@ -18,5 +19,4 @@
             opportunities and lose potential revenue because it's not optimising operating processes 
             or making the most of customer relationships and sales leads.</h6>
     </div>
-{% endif %}
 {% endblock %}
