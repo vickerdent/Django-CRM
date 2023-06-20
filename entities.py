@@ -1,8 +1,8 @@
 from datetime import datetime
 
 class Customer:
-    def __init__(self, first_name: str, last_name: str, email: str, 
-                 phone: str, address: str, city: str, state: str, zipcode: str, created_at=datetime.now()):
+    def __init__(self, first_name: str, last_name: str, email: str, phone: str, address: str, 
+                 city: str, state: str, zipcode: str, created_at=datetime.now()):
         self.first_name = first_name
         self.last_name = last_name
         self.email = email
@@ -26,4 +26,14 @@ class Customer:
                    "State": self.state,
                    "Zipcode": self.zipcode,
                    "Created At": self.created_at}
+        return diction
+    
+    def to_update(self):
+        diction = {"First Name": self.first_name,
+                   "Last Name": self.last_name,
+                   "Phone Number": self.phone,
+                   "Address": self.address,
+                   "City": self.city,
+                   "State": self.state,
+                   "Zipcode": self.zipcode}
         return diction
